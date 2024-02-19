@@ -1,0 +1,131 @@
+@import "partials/mixins";
+@import "partials/variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  padding: 25px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $neutral_light_gray;
+}
+
+main {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.default-style {
+  @include sectionStyle;
+}
+
+.first-section {
+  background-color: $neutral_white;
+  border-radius: 5px 5px 0 0;
+
+  h1 {
+    margin-bottom: 15px;
+    color: $primary_cyan;
+    font-weight: 700;
+  }
+
+  p:first-of-type {
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: $primary_bright_yellow;
+  }
+
+  p:last-child {
+    color: $neutral_grayish_blue;
+  }
+}
+
+.second-section {
+  background-color: $primary_cyan;
+
+  h2 {
+    color: $neutral_white;
+    margin-bottom: 15px;
+  }
+
+  p:first-of-type {
+    color: rgba(255, 255, 255, 0.687);
+    margin-bottom: 15px;
+
+    span {
+      color: $neutral_white;
+      font-size: 28px;
+      font-weight: 700;
+    }
+  }
+
+  p:last-of-type {
+    color: $neutral_white;
+    margin-bottom: 25px;
+  }
+
+  button[type="submit"] {
+    @include submitButton;
+  }
+}
+
+.third-section {
+  background-color: $primary_cyan_light;
+  border-radius: 0 0 5px 5px;
+
+  h3 {
+    color: $neutral_white;
+    margin-bottom: 15px;
+  }
+
+  p {
+    color: $neutral_white;
+    padding-right: 65px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    max-width: 640px;
+  }
+
+  .default-style {
+    padding: 35px;
+  }
+
+  .first-section {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+    width: 640px;
+    padding: 65px 35px;
+  }
+
+  .second-section {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    border-radius: 0 0 0 5px;
+  }
+
+  .third-section {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    border-radius: 0 0 5px 0;
+  }
+}

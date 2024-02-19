@@ -1,0 +1,126 @@
+/* === COLORS === */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  padding: 25px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(204, 43%, 93%);
+}
+
+main {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.default-style {
+  padding: 30px 25px;
+  height: 250px;
+  width: 320px;
+}
+
+.first-section {
+  background-color: hsla(0, 0%, 100%, 0.835);
+  border-radius: 5px 5px 0 0;
+}
+.first-section h1 {
+  margin-bottom: 15px;
+  color: hsl(179, 62%, 43%);
+  font-weight: 700;
+}
+.first-section p:first-of-type {
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: hsl(71, 73%, 54%);
+}
+.first-section p:last-child {
+  color: hsl(218, 22%, 67%);
+}
+
+.second-section {
+  background-color: hsl(179, 62%, 43%);
+}
+.second-section h2 {
+  color: hsla(0, 0%, 100%, 0.835);
+  margin-bottom: 15px;
+}
+.second-section p:first-of-type {
+  color: rgba(255, 255, 255, 0.687);
+  margin-bottom: 15px;
+}
+.second-section p:first-of-type span {
+  color: hsla(0, 0%, 100%, 0.835);
+  font-size: 28px;
+  font-weight: 700;
+}
+.second-section p:last-of-type {
+  color: hsla(0, 0%, 100%, 0.835);
+  margin-bottom: 25px;
+}
+.second-section button[type=submit] {
+  width: 100%;
+  padding: 15px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(71, 73%, 54%);
+  color: hsla(0, 0%, 100%, 0.835);
+  font-weight: 700;
+  font-size: 18px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+.third-section {
+  background-color: hsla(179, 62%, 43%, 0.627);
+  border-radius: 0 0 5px 5px;
+}
+.third-section h3 {
+  color: hsla(0, 0%, 100%, 0.835);
+  margin-bottom: 15px;
+}
+.third-section p {
+  color: hsla(0, 0%, 100%, 0.835);
+  padding-right: 65px;
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    max-width: 640px;
+  }
+  .default-style {
+    padding: 35px;
+  }
+  .first-section {
+    grid-column: 1/span 2;
+    grid-row: 1/span 1;
+    width: 640px;
+    padding: 65px 35px;
+  }
+  .second-section {
+    grid-column: 1/span 1;
+    grid-row: 2/span 1;
+    border-radius: 0 0 0 5px;
+  }
+  .third-section {
+    grid-column: 2/span 1;
+    grid-row: 2/span 1;
+    border-radius: 0 0 5px 0;
+  }
+}/*# sourceMappingURL=style.css.map */
